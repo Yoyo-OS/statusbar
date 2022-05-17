@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
- * Author:     cutefishos <cutefishos@foxmail.com>
+ * Author:     yoyoos <yoyoos@foxmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ StatusBar::StatusBar(QQuickView *parent)
     : QQuickView(parent)
     , m_acticity(new Activity)
 {
-    QSettings settings("cutefishos", "locale");
+    QSettings settings("yoyoos", "locale");
     m_twentyFourTime = settings.value("twentyFour", false).toBool();
 
     setFlags(Qt::FramelessWindowHint | Qt::WindowDoesNotAcceptFocus);
