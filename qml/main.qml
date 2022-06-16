@@ -249,7 +249,26 @@ Item {
                 }
             }
         }
+        StandardItem {
+            id: lyricsItem
+            visible: lyricsHelper.lyricsVisible
+            animationEnabled: true
+            Layout.fillHeight: true
+            Layout.preferredWidth: _lyricsLayout.implicitWidth + FishUI.Units.smallSpacing
 
+            RowLayout {
+                id: _lyricsLayout
+                anchors.fill: parent
+
+                Label {
+                    id: lyricsLabel
+                    Layout.alignment: Qt.AlignCenter
+                    font.pointSize: rootItem.fontSize
+                    color: rootItem.textColor
+                    text: lyricsHelper.lyrics
+                    }
+                }
+         }
         // System tray(Right)
         SystemTray {}
 

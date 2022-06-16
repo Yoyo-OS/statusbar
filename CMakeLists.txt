@@ -29,6 +29,7 @@ set(SRCS
     src/capplications.cpp
     src/notifications.cpp
     src/backgroundhelper.cpp
+    src/lyricshelper.cpp
 
     src/systemtray/statusnotifieritemsource.cpp
     src/systemtray/systemtraytypes.cpp
