@@ -25,6 +25,7 @@
 LyricsHelper::LyricsHelper(QObject *parent)
     : QObject(parent)
 {
+    m_LyricsVisible = false;
     //建立到session bus的连接
     QDBusConnection connection = QDBusConnection::sessionBus();
     if(!connection.registerService("com.yoyo.Statusbar"))
