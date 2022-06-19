@@ -30,7 +30,7 @@
 #include "notifications.h"
 #include "backgroundhelper.h"
 #include "lyricshelper.h"
-
+#include "permissionsurveillance.h"
 #include "appearance.h"
 #include "brightness.h"
 #include "battery.h"
@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<Notifications>(uri, 1, 0, "Notifications");
     qmlRegisterType<LyricsHelper>(uri, 1, 0, "LyricsHelper");
     qmlRegisterType<BackgroundHelper>(uri, 1, 0, "BackgroundHelper");
+    qmlRegisterType<PermissionSurveillance>(uri, 1, 0, "PermissionSurveillance");
 
     QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/yoyo-statusbar/translations/").arg(QLocale::system().name());
     if (QFile::exists(qmFilePath)) {

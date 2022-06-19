@@ -273,6 +273,29 @@ Item {
         SystemTray {}
 
         StandardItem {
+            id: permissionSurveillanceItem
+            visible: permissionSurveillance.permissionSurveillanceVisible
+            backcolor: "#ee7959"
+            backColorEnabled: true
+            checked: true
+            popupText: permissionSurveillance.cameraUser + " " + qsTr("is using the camera")
+            animationEnabled: true
+            Layout.fillHeight: true
+            Layout.preferredWidth: shutdownIcon.implicitWidth + FishUI.Units.smallSpacing + 4
+            Image {
+                id: permissionSurveillanceIcon
+                anchors.centerIn: parent
+                width: rootItem.iconSize
+                height: width
+                sourceSize: Qt.size(width, height)
+                source: "qrc:/images/dark/camera.svg"
+                asynchronous: true
+                antialiasing: true
+                smooth: false
+            }
+        }
+
+        StandardItem {
             id: controler
 
             checked: controlCenter.item.visible

@@ -127,5 +127,6 @@
         <file>images/dark/screenshot.svg</file>
         <file>images/light/do-not-disturb.svg</file>
         <file>images/dark/do-not-disturb.svg</file>
+        <file>images/dark/camera.svg</file>
     </qresource>
 </RCC>

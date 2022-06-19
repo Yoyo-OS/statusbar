@@ -30,6 +30,7 @@ set(SRCS
     src/notifications.cpp
     src/backgroundhelper.cpp
     src/lyricshelper.cpp
+    src/permissionsurveillance.cpp
 
     src/systemtray/statusnotifieritemsource.cpp
     src/systemtray/systemtraytypes.cpp

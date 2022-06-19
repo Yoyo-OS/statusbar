@@ -35,7 +35,8 @@ Item {
 
     property bool checked: false
     property bool animationEnabled: false
-
+    property bool backColorEnabled: false
+    property color backcolor: "transparent"
     property alias mouseArea: _mouseArea
 
     signal clicked(var mouse)
@@ -185,6 +186,10 @@ Item {
         ]
 
         color: {
+            if (backColorEnabled)
+            {
+                return backcolor
+            }
             if (control.checked) {
                 return (rootItem.darkMode) ? Qt.rgba(255, 255, 255, 0.2) : Qt.rgba(0, 0, 0, 0.1)
             }
