@@ -77,5 +77,10 @@
         <source>Close</source>
         <translation>关闭</translation>
     </message>
+    <message>
+        <location filename="../qml/main.qml" line="281"/>
+        <source>is using the camera</source>
+        <translation>正在使用相机</translation>
+    </message>
 </context>
 </TS>
