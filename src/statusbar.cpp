@@ -23,6 +23,7 @@
 #include "appmenu/appmenu.h"
 #include "statusbaradaptor.h"
 #include "lyricshelper.h"
+#include "capsulehelper.h"
 #include "permissionsurveillance.h"
 #include <QQmlEngine>
 #include <QQmlContext>
@@ -56,6 +57,7 @@ StatusBar::StatusBar(QQuickView *parent)
     engine()->rootContext()->setContextProperty("acticity", m_acticity);
     engine()->rootContext()->setContextProperty("process", new ProcessProvider);
     engine()->rootContext()->setContextProperty("lyricsHelper", new LyricsHelper);
+    engine()->rootContext()->setContextProperty("capsuleHelper", new CapsuleHelper);
     engine()->rootContext()->setContextProperty("permissionSurveillance", new PermissionSurveillance);
     engine()->rootContext()->setContextProperty("battery", Battery::self());
 

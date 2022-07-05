@@ -455,6 +455,55 @@ Item {
             }
         }
 
+        StandardItem {
+            id: progressItem
+            backcolor: "#93b5cf"
+            backColorEnabled: true
+            visible: capsuleHelper.progressVisible
+            animationEnabled: true
+            Layout.fillHeight: true
+            Layout.preferredWidth: _progressLayout.implicitWidth + FishUI.Units.smallSpacing
+
+            RowLayout {
+                id: _progressLayout
+                anchors.fill: parent
+
+                ProgressBar {
+                        id: progressbar
+                        from: 0
+                        to: 100
+                        value: capsuleHelper.progressValue
+                        width: 100
+
+                        anchors.centerIn: parent
+                        background: Rectangle {
+                            implicitWidth: progressbar.width
+                            implicitHeight: progressbar.height
+                            color: "transparent"
+                        }
+
+                        contentItem: Item {
+                            Rectangle {
+                                width: progressbar.visualPosition * progressbar.width
+                                height: progressbar.height
+                                color: "#5698c3"
+                            }
+                        }
+                    }
+                    Image {
+                        id: progressIcon
+                        anchors.centerIn: parent
+                        width: rootItem.iconSize
+                        height: width
+                        sourceSize: Qt.size(width, height)
+                        source: capsuleHelper.progressIcon
+                        asynchronous: true
+                        antialiasing: true
+                        smooth: false
+                    }
+                }
+        }
+
     }
 
     MouseArea {
